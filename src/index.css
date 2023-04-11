@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48%;
+  margin: 50px auto;
+  height: 100%;
+  padding-bottom: 30px;
+  background-image: linear-gradient(180deg, rgb(217, 77, 138),#f3f372);
+  justify-content: center;
+}
+
+.wrapper{
+width: 562px;
+margin-left: 12px;
+}
+.userBlockSection{
+display: grid;
+grid-template-rows: 69px 69px;
+grid-template-columns: 2fr 2fr;
+gap: 1px;
+}
+
+input{
+width: 98%;
+padding: 8px;
+border: 2px solid #ffffff;
+outline: none;
+background-color: #ffff;
+margin: 10px 0px;
+border-radius: 3px;
+}
+
+::placeholder{
+font-size: 12px;
+}
+
+.userBlock{
+display: flex;
+padding: 7px 20px 7px 10px;
+width: 86%;
+margin-bottom: 10px;
+background: white;
+border-radius: 3px;
+}
+
+
+img{
+width: 45px;
+}
+
+.userDetails{
+padding-left: 11px;
+}
+
+.userDetails p{
+font-size: 11px;
+margin-top: 0px;
+margin-bottom: 5px;
+color: #7a7f85;
+}
+
+.userProfile{
+font-weight: 700;
+}
