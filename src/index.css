@@ -12,14 +12,16 @@ code {
     monospace;
 }
 
+.container, .wrapper{
+  margin: 0 auto;
+  padding: 30px;
+}
+
 .container {
   width: 70%;
-  margin: 0 auto;
 }
 
 .wrapper {
-  padding: 30px 50px 50px;
-  margin: 0 auto;
   background-image: linear-gradient(180deg, rgb(217, 77, 138), #f3f372);
 }
 
