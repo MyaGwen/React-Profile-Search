@@ -7,8 +7,9 @@ export default function Main() {
   const filteredUsers = usersInfo.filter((item) =>
     search.toLowerCase() === '' ? true :
       item.firstName.toLowerCase().includes(search.toLowerCase()) ||
-      item.lastName.toLowerCase().includes(search.toLowerCase())
+      item.lastName.toLowerCase().includes(search.toLowerCase()) 
     // item.id.toString().toLowerCase().includes(search.toLowerCase())
+    // item.title.toString().toLowerCase().includes(search.toLowerCase())
   );
 
 
