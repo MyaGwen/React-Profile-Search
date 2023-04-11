@@ -5,11 +5,15 @@ export default function Main() {
   const [search, setSearch] = useState('');
 
   const filteredUsers = usersInfo.filter((item) =>
-    search.toLowerCase() === '' ? true : item.firstName.toLowerCase().includes(search.toLowerCase())
+    search.toLowerCase() === '' ? true :
+      item.firstName.toLowerCase().includes(search.toLowerCase()) ||
+      item.lastName.toLowerCase().includes(search.toLowerCase())
+    // item.id.toString().toLowerCase().includes(search.toLowerCase())
   );
 
+
   const renderUsers = filteredUsers.map((user, index) => {
-    const usersList = `${user.title}. ${user.firstName}. ${user.lastName}`;
+    const usersInfo = `${user.title}. ${user.firstName}. ${user.lastName}`;
     return (
       <div className='userBlock' key={index}>
         <div className='displayPicture'>
@@ -17,7 +21,7 @@ export default function Main() {
         </div>
         <div className='userDetails'>
           <p>{user.id}</p>
-          <p className='userProfile'>{usersList}</p>
+          <p className='userProfile'>{usersInfo}</p>
         </div>
       </div>
     );
