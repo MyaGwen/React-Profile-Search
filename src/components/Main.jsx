@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { usersInfo } from '../data/userInfo';
 
 export default function Main() {
+  // I see atleast three different componenets here, can you try to break it down
   const [search, setSearch] = useState('');
 
   const filteredUsers = usersInfo.filter((item) =>
-    search.toLowerCase() === '' ? true :
-      item.firstName.toLowerCase().includes(search.toLowerCase()) ||
-      item.lastName.toLowerCase().includes(search.toLowerCase()) 
+    search.toLowerCase() === '' ? item : // you can use "item" instead of true
+      item.firstName.toLowerCase().startsWith(search.toLowerCase()) || // remember that you are searching for a name, meaning the search value has to be the begiining of the name, startsWith is more effective than includes at this point
+      item.lastName.toLowerCase().startsWith(search.toLowerCase()) 
     // item.id.toString().toLowerCase().includes(search.toLowerCase())
     // item.title.toString().toLowerCase().includes(search.toLowerCase())
   );
